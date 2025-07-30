@@ -88,6 +88,7 @@ def folder_to_images(folder, size):
 #### 2.1.1. Truy vấn hình ảnh với độ đo L1
 Chúng ta xây dựng một hàm absolute_difference() tính độ tương đồng giữa các hình ảnh. Trong ví
 dụ này chúng ta sẽ sử dụng hàm L1. Hàm L1 có công thức tính như sau:
+
 $$
 L1(\vec{a}, \vec{b}) = \sum_{i=1}^{N} |a_i - b_i|
 $$
@@ -158,9 +159,11 @@ Tiếp theo chúng ta sẽ truy vấn hình ảnh với 3 độ đo L2, Cosine S
 Chúng ta sẽ thực hiện code tương tự như độ đo L1.
 
 #### 2.1.2. Truy vấn hình ảnh với độ đo L2
+
 $$
 L2(\vec{a}, \vec{b}) = \sqrt{\sum_{i=1}^{N} (a_i - b_i)^2}
 $$
+
 Chúng ta tạo hàm tính độ tương đồng L2 mean_square_difference()
 
 ```
@@ -215,9 +218,11 @@ plot_results(query_path, ls_path_score, reverse=False)
 <img src="images/Example-of-complex-image-retrieval-with-L2.png" alt="drawing" width="600"/>
 
 #### 2.1.3. Truy vấn hình ảnh với độ đo Cosine Similarity
+
 $$
 \text{cosine\_similarity}(\vec{a}, \vec{b}) = \frac{\vec{a} \cdot \vec{b}}{\|\vec{a}\| \|\vec{b}\|} = \frac{\sum_{i=1}^{N} a_i b_i}{\sqrt{\sum_{i=1}^{N} a_i^2} \sqrt{\sum_{i=1}^{N} b_i^2}}
 $$
+
 Chúng ta tạo hàm tính độ tương đồng cosine_similarity().
 
 ```
@@ -268,9 +273,11 @@ plot_results(query_path, ls_path_score, reverse=True)
 <img src="images/Example-of-complex-image-retrieval-with-cosine-similarity.png" alt="drawing" width="600"/>
 
 #### 2.1.4. Truy vấn hình ảnh với chỉ số Correlation Coefficient
+
 $$
 r = \frac{E[(X - \mu_X)(Y - \mu_Y)]}{\sigma_X \sigma_Y} = \frac{\sum (x_i - \mu_X)(y_i - \mu_Y)}{\sqrt{\sum (x_i - \mu_X)^2} \sqrt{\sum (y_i - \mu_Y)^2}}
 $$
+
 Chúng ta tạo hàm tính độ tương đồng correlation_coefficient().
 
 ```
